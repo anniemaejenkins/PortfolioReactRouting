@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 // import dumb components
 import Home from './Home.js';
@@ -13,10 +14,32 @@ export default class BaseLayout extends Component{
     return(
       <div>
         <div className="navBar">
-          <Home/>
-          <About/>
-          <Portfolio/>
+          <div>
+            <button>
+              <Link to="/home">
+                Home Page
+              </Link>
+            </button>
+          </div>
+
+          <div>
+            <button>
+              <Link to="/about">
+                About Page
+              </Link>
+            </button>
+          </div>
+
+          <div>
+            <button>
+              <Link to="/portfolio">
+                Portfolio Page
+              </Link>
+            </button>
+          </div>
         </div>
+
+        
       </div>
     );
   }
