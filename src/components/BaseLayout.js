@@ -12,9 +12,11 @@ export default class BaseLayout extends Component{
   render(){
     return(
       <div>
-      <Home/>
-      <About/>
-      <Portfolio/>
+        <div className="navBar">
+          <Home/>
+          <About/>
+          <Portfolio/>
+        </div>
       </div>
     );
   }
