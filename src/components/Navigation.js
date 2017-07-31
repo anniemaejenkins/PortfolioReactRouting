@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // components
 // import Home from './Home.js';
@@ -16,27 +16,44 @@ export default class Navigation extends Component{
         <div className="navBar">
           <div>
             <button>
-              <Link to="/home">
+              <NavLink activeClassName="selected" to="/home">
                 Home Page
-              </Link>
+              </NavLink>
             </button>
           </div>
 
           <div>
             <button>
-              <Link to="/about">
+              <NavLink activeClassName="selected" to="/about">
                 About Page
-              </Link>
+              </NavLink>
             </button>
           </div>
 
           <div>
             <button>
-              <Link to="/portfolio">
+              <NavLink activeClassName="selected" to="/portfolio">
                 Portfolio Page
-              </Link>
+              </NavLink>
             </button>
           </div>
+
+          <div>
+            <button>
+              <NavLink activeClassName="selected" to="/contact">
+                Contacts Page
+              </NavLink>
+            </button>
+          </div>
+
+          <div>
+            <button>
+              <NavLink activeClassName="selected" to="/reference">
+                Reference Page
+              </NavLink>
+            </button>
+          </div>
+
         </div>
       </div>
     );
