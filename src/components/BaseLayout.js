@@ -13,7 +13,7 @@ export default class BaseLayout extends Component{
   }
   render(){
     return(
-      <div>
+      <div> 
         <Navigation />
         { this.props.children }
       </div>
