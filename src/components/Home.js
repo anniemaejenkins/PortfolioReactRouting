@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export default function Home(props){
-  return(
-    <div>
-    Home component!
-    </div>
-  );
+import BaseLayout from './BaseLayout.js';
+
+export default class Home extends Component{
+  render(){
+    return(
+      <BaseLayout>
+        <h3>I am the Home Component</h3>
+      </BaseLayout>
+    );
+  }
 }

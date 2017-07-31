@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
-// import dumb components
-import Home from './Home.js';
-import About from './About.js';
-import Portfolio from './Portfolio.js';
+// components
+// import Home from './Home.js';
+// import About from './About.js';
+// import Portfolio from './Portfolio.js';
+import Navigation from './Navigation.js';
 
 export default class BaseLayout extends Component{
   constructor(props){
@@ -13,33 +14,8 @@ export default class BaseLayout extends Component{
   render(){
     return(
       <div>
-        <div className="navBar">
-          <div>
-            <button>
-              <Link to="/home">
-                Home Page
-              </Link>
-            </button>
-          </div>
-
-          <div>
-            <button>
-              <Link to="/about">
-                About Page
-              </Link>
-            </button>
-          </div>
-
-          <div>
-            <button>
-              <Link to="/portfolio">
-                Portfolio Page
-              </Link>
-            </button>
-          </div>
-        </div>
-
-        
+        <Navigation />
+        { this.props.children }
       </div>
     );
   }
